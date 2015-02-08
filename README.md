@@ -1,8 +1,7 @@
-mediator
-========
+VCP-Stammes Page Tempalte
+=========================
 
-A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme
-[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](http://blog.base68.com).
+A mediator inspired Jekyll page theme. The theme is optimized to provide [VCP](http://vcp.de) groups an easy to use webpage template. It provides all functionalities to setup an simple scouting webpage.
 
 Screenshots
 --------
@@ -13,9 +12,8 @@ Screenshots
 Features
 -------
 * Fully Responsive layout
-* Use header images in articles, if you want to (add tag "image" and url to the image in the front matter section of a post)
+* Integrated templates for staff and groups
 * Minimal design
-* Featured article support
 * FontAwesome implemented for easy use of icons fonts
 * Free & Open Source Font usage
 
@@ -43,11 +41,14 @@ Main settings for the site
 * **logo**: small logo for the site (300x * 300x)
 * **cover**: large background image on the index page
 
-* **name**: name site owner
-* **email**: mail address of the site owner
-* **author**: author name
-* **author_image**: small image of author (300x * 300px)
+* **name**: name webmaster
+* **email**: mail address of the webmaster
+* **group_name**: name of the scout group
+* **group_address**: address of group
+* **group_phone**: phone number of the group or webmaster
+* **group_email**: emailadress of the group
 
+* **url**: url of the website
 
 ### Social
 
@@ -69,6 +70,26 @@ http://twitter.com/share?text=post_title&amp;url=post_url
 
 See [_config.yml](https://github.com/dirkfabisch/mediator/blob/master/_config.yml) for more examples.
 
+Group
+-----
+You can define preformated group descriptions. They show up at the front page and are linked to a more detailed sub page. To get all the details in place, you have to provide some metadata.
+
+* **layout**: should be `group`
+* **title**: name of the group
+* **image**: image of the group
+* **leaders**: description of the group leads
+  * **name**: full name of the group lead
+  * **bio**: short sentence about the carier
+  * **contanct**: contact information like phone number
+  * **image**: portrait image
+* **meeting**: information about when the group meetings are happen
+  * **point**: meeting point / address
+  * **day**: meeting day
+  * **from**: start time
+  * **to**: end time
+  * **level**: level of the group e.g. cup scouts
+  * **age**: agre range
+
 Licensing
 ---------
 
@@ -76,4 +97,4 @@ Licensing
 
 Contact
 -------
-I'd love to hear from you at [@dirkfabisch](https://twitter.com/dirkfabisch). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome.
+I'd love to hear from you at [@quablab](https://twitter.com/quablab). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome.

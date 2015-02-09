@@ -5,9 +5,9 @@ A mediator inspired Jekyll page theme. The theme is optimized to provide [VCP](h
 
 Screenshots
 --------
-![screenshot](/assets/images/screenshot1.jpg)
-![screenshot](/assets/images/screenshot2.jpg)
-![screenshot](/assets/images/screenshot3.jpg)
+![screenshot](/assets/images/Screenshot_1.png)
+![screenshot](/assets/images/Screenshot_2.png)
+![screenshot](/assets/images/Screenshot_3.png)
 
 Features
 -------

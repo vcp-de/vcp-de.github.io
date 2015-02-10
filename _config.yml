@@ -1,28 +1,37 @@
-# Build settings
-markdown: redcarpet
-highlighter: pygments
-
 # Site settings
-title: "VCP Stamm Martin Luther"
-description: > # this means to ignore newlines until "email:"
-   Pfadfinden in Eisenach.
 
+# Title of the Webpage (e.g. group name)
+title: "VCP Stamm Martin Luther"
+# Short description of the group (single line)
+description: "Pfadfinden in Eisenach."
+# Name of the group
+group_name: VCP Stamm Martin Luther
+# Address of the group
+group_address: >
+  Am Kirchweg 3<br/>
+  12345 Eisenach
+# Phone number of the group
+group_phone: 0123 / 456 78 90
+# Emailadress of the group
+group_email: kontakt@test-stamm.de
+# Name of the Webmaster
+name: 'Walter Webmaster'
+# Emailadress of the Webmaster
 email: info@johannes-engelke.de
+
+# URL of the webpage
+url: "http://vcp-de.github.io/" # the base hostname & protocol for your site
+
+# Images
+
 #blog logo
 logo: "/assets/images/VCP-Zeichen-RGB-128px.png"
 # blog cover
 cover: "/assets/images/VCP_Plakate_2012_3_lowres.jpg"
 
-name: 'Walter Webmaster'
-
-group_name: VCP Stamm Martin Luther
-group_address: >
-  Am Kirchweg 3<br/>
-  12345 Eisenach
-
-group_phone: 0123 / 456 78 90
-group_email: kontakt@test-stamm.de
-
+# Build settings
+markdown: redcarpet
+highlighter: pygments
 
 collections:
   team:
@@ -30,7 +39,6 @@ collections:
   groups:
     output: true
 
-url: "http://vcp-de.github.io/" # the base hostname & protocol for your site
 baseurl: ""
 
 # social icons and sharing options

@@ -30,7 +30,7 @@ collections:
   groups:
     output: true
 
-url: "http://joek.github.io/" # the base hostname & protocol for your site
+url: "http://vcp-de.github.io/" # the base hostname & protocol for your site
 baseurl: ""
 
 # social icons and sharing options

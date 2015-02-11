@@ -23,51 +23,78 @@ layout: default
             &nbsp;&nbsp;·&nbsp;&nbsp;
         {% endif %}
       {% endfor %}
-      <a href="/kontakt/">Kontakt</a>
+      <a href="#contact">Kontakt</a>
     </div>
 </header>
 
 
 <main class="content" role="main">
+    {% if site.groups != empty %}
+      <h5 class="index-headline featured"><span>Gruppen</span></h5>
+      <div class="container featured">
+        {% for group in site.groups %}
+          <article class="post" >
+            <div class="article-item">
+              <header class="post-header">
+                <h2 class="post-title" itemprop="name"><a href="{{ group.url }}" itemprop="url">{{ group.title }}</a></h2>
+              </header>
+              <section class="group-excerpt" itemprop="description">
+                <div class="group-excerpt-image" style="background-image: url({{ group.image }})">Blog Logo</div>
+                <div class="group-excerpt-content">
+                  {{ group.content | strip_html | truncatewords: 50 }}
+                </div>
+              </section>
+              <div class="post-meta">
+                <b>Wann:</b> {{ group.meeting.day }} von {{group.meeting.from}} bis {{group.meeting.to}}
+                <b>Altersstufe:</b> {{group.level}} ({{group.age}} Jahre)
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
 
-    <h5 class="index-headline featured"><span>Gruppen</span></h5>
+    {% if site.team != empty %}
+      <h5 class="index-headline featured"><span>Stammesleitung</span></h5>
 
-    <div class="container featured">
-      {% for group in site.groups %}
+      <div class="container featured">
+        {% for member in site.team %}
         <article class="post" >
           <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ group.url }}" itemprop="url">{{ group.title }}</a></h2>
-            </header>
-            <section class="group-excerpt" itemprop="description">
-              <div class="group-excerpt-image" style="background-image: url({{ group.image }})">Blog Logo</div>
-              <div class="group-excerpt-content">
-                {{ group.content | strip_html | truncatewords: 50 }}
+            <section class="team-excerpt" itemprop="description">
+              <div class="team-excerpt-content">
+                <section class="author">
+                  <div class="team-excerpt-image" style="background-image: url({{ member.image }})">Blog Logo</div>
+                  <h4>{{ member.title }}</h4>
+                  <p class="bio">{{member.bio}}</p>
+                  <hr>
+                  <p class="published">Aufgaben:  {{member.jobs | join: ", "}}</p>
+                </section>
               </div>
             </section>
             <div class="post-meta">
-              <b>Wann:</b> {{ group.meeting.day }} von {{group.meeting.from}} bis {{group.meeting.to}}
-              <b>Altersstufe:</b> {{group.level}} ({{group.age}} Jahre)
             </div>
           </div>
         </article>
-      {% endfor %}
-    </div>
-
-    <h5 class="index-headline featured"><span>Stammesleitung</span></h5>
-
+        {% endfor %}
+      </div>
+    {% endif %}
+    <h5 class="index-headline featured"><span>Kontakt</span></h5>
+    <a name="contact"></a>
     <div class="container featured">
-      {% for member in site.team %}
       <article class="post" >
         <div class="article-item">
+          <header class="post-header">
+          </header>
           <section class="team-excerpt" itemprop="description">
             <div class="team-excerpt-content">
               <section class="author">
-                <div class="team-excerpt-image" style="background-image: url({{ member.image }})">Blog Logo</div>
-                <h4>{{ member.title }}</h4>
-                <p class="bio">{{member.bio}}</p>
-                <hr>
-                <p class="published">Aufgaben:  {{member.jobs | join: ", "}}</p>
+                <p><strong>{{site.group_name}}</strong><br>
+                  {{ site.group_address }}</p>
+
+                  {% if site.group_phone %}<p><strong>Telefon:</strong> {{ site.group_phone }}</p>{% endif %}
+
+                  <p><strong>Email:</strong> {{ site.group_email }}</p>
               </section>
             </div>
           </section>
@@ -75,8 +102,5 @@ layout: default
           </div>
         </div>
       </article>
-      {% endfor %}
     </div>
-
-
 </main>
